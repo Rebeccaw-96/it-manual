@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF下载中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <header class="text-center mb-10">
+            <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-800 mb-3">PDF下载中心</h1>
+            <p class="text-gray-600 text-lg">扫描二维码或点击下方链接下载PDF文件</p>
+        </header>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">扫描二维码访问</h2>
+                    <p class="text-gray-600 mb-4">使用手机扫描二维码，在手机上下载PDF文件</p>
+                    <div class="flex items-center gap-4">
+                        <button id="generateQrBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2">
+                            <i class="fa fa-qrcode"></i>
+                            <span>生成二维码</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="qrcodeContainer" class="w-full md:w-1/2 flex justify-center items-center min-h-[200px] border-2 border-dashed border-gray-300 rounded-lg">
+                    <p class="text-gray-400">点击"生成二维码"按钮生成</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-6">可用PDF文件</h2>
+            <div id="pdfList" class="space-y-4">
+                <!-- PDF文件列表将通过JavaScript动态生成 -->
+                <p class="text-gray-400 italic">加载中...</p>
+            </div>
+        </div>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>© 2025 PDF下载中心 | 最后更新: <span id="lastUpdated">2025年7月21日</span></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode.js@1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
