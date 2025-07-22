@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF文件下载</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>技术文档下载</h1>
+        <div id="pdf-list" class="pdf-list">
+            <!-- PDF列表将在这里动态生成 -->
+        </div>
+        <div class="qr-code">
+            <h2>扫描二维码访问</h2>
+            <div id="qrcode"></div>
+        </div>
+    </div>
+    <!-- 二维码生成库 -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <!-- 主脚本 -->
+    <script src="script.js"></script>
+</body>
+</html>
